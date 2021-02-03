@@ -9,7 +9,7 @@ function getPosition() {
     // One shot position getting or continus watch
     navigator.geolocation.getCurrentPosition(showLocation, handleLocationError);
     // navigator.geolocation.watchPosition(showLocation, handleLocationError);
-}
+};
 
 function showLocation(position) {
     console.log(position);
@@ -20,7 +20,7 @@ function showLocation(position) {
     var date = new Date(position.timestamp);
     document.getElementById("timestamp").innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
     initMap(position.coords.latitude, position.coords.longitude);
-}
+};
 
 function handleLocationError(error) {
     var locationError = document.getElementById("locationError");
@@ -38,8 +38,8 @@ function handleLocationError(error) {
         case 3:
             locationError.innerHTML = "The browser timed out before retrieving the location.";
             break;
-    }
-}
+    };
+};
 
 function initMap(lat, lng) {
     //            if (!lat) lat = 32.0749831;
@@ -60,4 +60,4 @@ function initMap(lat, lng) {
         map,
         title: 'Your Selection'
     });
-}
+};
