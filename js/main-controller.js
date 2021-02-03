@@ -42,8 +42,8 @@ function handleLocationError(error) {
 };
 
 function initMap(lat, lng) {
-    //            if (!lat) lat = 32.0749831;
-    //            if (!lng) lat = 34.9120554;
+    // if (!lat) lat = 32.0749831;
+    // if (!lng) lat = 34.9120554;
     var elMap = document.querySelector('#map');
     var options = {
         center: { lat, lng },
